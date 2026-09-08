@@ -1,0 +1,272 @@
+/*Gäller alla sidor*/
+
+body {
+    background-color: whitesmoke;
+    font-family: 'sans-serif';
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+}
+
+/* Jag gör en nav i min html kod för semantikens skull, navigierar mellan länkarna. 
+Jag gör en display block så att man kan klicka på hela rutan och inte bara texten. resternade är bara fint, färg & och mellanrum.
+text-decoration tar jag bort eftersom det vanligtvis är streck under länken. */
+header nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    background: lightgrey;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 1.2rem;
+
+}
+
+/* gör så att det blir mörkare när man åker på rutan med musen*/
+header nav a:hover {
+    background: darkgrey;
+}
+
+/*Snyggar till mina rubriker*/
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: lighter;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
+
+main section {
+    margin-bottom: 1.5rem;
+}
+
+
+/*Index*/
+
+/*Gör min bild rund med border radius & aspect ratio, cover gör så att bilden inte trycks ihop utan beskär den snyggt.*/
+
+#ommig main img {
+    border-radius: 50%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 55%;
+
+}
+
+#ommig main a {
+    color: black;
+    font-style: italic;
+    text-decoration: none;
+
+}
+
+/*Gör så att bakgrunden blir grå på länken när musen åker över*/
+#ommig main a:hover {
+    background: lightgrey;
+}
+
+/*Gjorde en div i min html så att main skulle få två flexbarn så att jag kunde lägga dom bredvid varandra nere i media*/
+#ommig main div {
+    width: 40%;
+    text-align: center;
+}
+
+#ommig main>section {
+
+    font-size: 1.25rem;
+    padding: 3rem;
+}
+
+/*Sida 2*/
+
+#sidatva section p {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/*Gör så att det inte blir några punkter på min lista.*/
+#sidatva ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/*Lägger till en liten bakgrund på mina olika sektioner, så att de delas av lite, samt snyggare till med lite luft*/
+#sidatva main section {
+    background-color: rgb(247, 239, 244);
+    border-radius: 8px;
+    padding: 5px;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+/*Sida 3*/
+
+#sidatre main a:hover {
+    background: lightgrey;
+}
+
+/*Lägger display grid så att jag kan lägga mina barn i ett rutnät, alltså både rader och kolumner samtidigt.I media så har jag lagt
+grid template (2,1fr) vilket gör att vid tillräckligt stor skärm så lägger sig bilderna 2 och 2.
+La till max width för jag tyckte bilderna blev för stora.*/
+#sidatre section ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#sidatre main a {
+    color: black;
+    font-style: italic;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-bottom: 1px solid black;
+
+}
+
+/*Igen, lägger en liten bakgrund på själva avsnittet så det skiljer ut sig lite. */
+#sidatre main {
+    background-color: rgb(247, 239, 244);
+    border-radius: 8px;
+    padding: 5px;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+/*Snyggar till bilderna, aspect ratio låser formen och object cover beskär den så den passa i storleken jag skrivit. 
+Display block så att bilderna slutar vara inline. Transition så att den åker fram lite mjukare */
+#sidatre section img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/8;
+    object-fit: cover;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+/* Här gör jag så att bilden blir lite mörkare när man håller på den, transform så att bilden blir lite större på sin plats, snyggt bara.
+overflow gör att allt som egentligen borde komma utanför bilden stannar i bilden. Så kort och gott ser det ut som man zoomat in*/
+
+#sidatre section a:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+#sidatre section li {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+#sidatre h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+
+
+
+/*Sida två och tre */
+
+/*snyggar till min footer, med färg, och musen åker över osv*/
+footer p {
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+
+}
+
+footer {
+    margin-top: 2rem;
+    border-top: 1px solid black;
+    padding-top: 0.5rem;
+    background-color: lightgrey;
+
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+/* gör så att det blir mörkare när man åker på rutan med musen*/
+footer a:hover {
+    background: darkgrey;
+}
+
+
+/* lägger till flex så att om det finns möjlighet så lägger sig länkarna bredvid varandra. Flex 1 betyder att rutorna får lika mycket utrymme på sidan,
+detta behövs inte på mobil eftersom de ligger på olika rader*/
+
+@media (min-width: 768px) {
+    header nav ul {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    header nav li {
+        flex: 1;
+    }
+
+    header nav a {
+        margin-bottom: 0;
+    }
+
+    #ommig main {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+    }
+
+    #ommig main div {
+        width: 500px;
+        flex-shrink: 0;
+    }
+
+    #ommig main>section {
+        flex: 1;
+    }
+
+    #sidatva main {
+        display: flex;
+        gap: 2rem;
+
+    }
+
+    #sidatva main>section {
+        flex: 1;
+    }
+
+    #sidatre section ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
