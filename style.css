@@ -1,9 +1,22 @@
 /*Gäller alla sidor*/
 
+*,
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     background-color: whitesmoke;
-    font-family: 'sans-serif';
+    font-family: sans-serif;
     margin: 0;
+    min-height: 100vh;
+    display: flex;  
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 header nav ul {
